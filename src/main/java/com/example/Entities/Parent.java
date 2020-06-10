@@ -1,6 +1,7 @@
 package com.example.Entities;
 
-public class Child {
+public class Parent {
+
 	private String name;
 	private Integer age;
 
@@ -22,7 +23,7 @@ public class Child {
 
 	@Override
 	public String toString() {
-		return "Child [name=" + name + ", age=" + age + "]";
+		return "Parent [name=" + name + ", age=" + age + "]";
 	}
 
 }

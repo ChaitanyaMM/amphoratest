@@ -1,23 +1,19 @@
 package com.example.Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
+
+//a person could have multiple children
+// immediate parent
+// person immediate parents could have their immediate parents
 public class Person {
 
-	private String id;
 	private String name;
-	private String age;
-	private List<Family> childs;
-	private Family Parent;
-	private Family grandParent;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
+	private Integer age;
+	private List<Child> childs = new ArrayList<>();
+	private Parent Parent;
+	private Parent grandParent;
 
 	public String getName() {
 		return name;
@@ -27,47 +23,42 @@ public class Person {
 		this.name = name;
 	}
 
-	public String getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
-	public List<Family> getChilds() {
+	public List<Child> getChilds() {
 		return childs;
 	}
 
-	public void setChilds(List<Family> childs) {
+	public void setChilds(List<Child> childs) {
 		this.childs = childs;
 	}
 
-	public Family getParent() {
+	public Parent getParent() {
 		return Parent;
 	}
 
-	public void setParent(Family parent) {
+	public void setParent(Parent parent) {
 		Parent = parent;
 	}
 
-	public Family getGrandParent() {
+	public Parent getGrandParent() {
 		return grandParent;
 	}
 
-	public void setGrandParent(Family grandParent) {
+	public void setGrandParent(Parent grandParent) {
 		this.grandParent = grandParent;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", childs=" + childs + ", Parent=" + Parent
-				+ ", grandParent=" + grandParent + "]";
+		return "Person [name=" + name + ", age=" + age + ", childs=" + childs + ", Parent=" + Parent + ", grandParent="
+				+ grandParent + "]";
 	}
-	
-	
-	
-	
-	
 
 }
